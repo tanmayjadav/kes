@@ -1,0 +1,22 @@
+{
+  "general": {
+    "logout": "Log Out",
+    "welcome": "Welcome",
+    "saveDetails": "Save Details",
+    "inProgress": "In Progress",
+    "complete": "Completed",
+    "pending": "Pending",
+    "previous": "<< Previous",
+    "delete": "Delete",
+    "save": "Save"
+  },
+
+  "officeLocations": {
+    "officeLocationTitle": "Office Locations",
+    "officeDetails": "Provide details about locations you have offices in",
+    "officeDetailsMsg": "If you operate in more than one office locations then it’s advisable to add your different office locations here. This allows you to report the emissions and performance of all your different locations",
+    "officedetailsSkipMsg": "I don’t have any additional office location to add >>",
+    "addLocation": "+Add Location +",
+    "newEntity": "New Entity"
+  }
+}
