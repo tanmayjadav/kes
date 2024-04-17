@@ -72,6 +72,11 @@ const theme = createTheme({
     blackOpacity: "rgba(0, 0, 0, 0.5)",
     greyOpacity: "#9D9D9D",
     whiteOpacity: "rgba(255, 255, 255, 0.3)",
+    
+    Background:"#F9FBFF",
+    greyIcon:"#EAF0FB",
+    lightGreyOpacity:"#C0D3F0",
+    shadowShade:"#BDCADE33"
   },
 });
 
