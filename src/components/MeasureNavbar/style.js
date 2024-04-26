@@ -32,9 +32,12 @@ export const TabLists = styled(TabList)(({theme}) =>({
     border:"none",
     // padding:"20px",
     color:"red",
+    
     "& .MuiTabPanel-root":{
       padding: 0,
+      position: 'relative', 
     },
+
     "& .MuiTabs-flexContainer":{
       padding:"30px",
       paddingBottom:"0",
@@ -44,13 +47,15 @@ export const TabLists = styled(TabList)(({theme}) =>({
     gap:"20px",
       "& .MuiTabs-indicator":{
       backgroundColor: theme.primary.orange,
-      width:"78px !important",
-      alignSelf:"center",
-      textAlign:"center",
-      marginLeft:"20px",
-      height: "3px",/* Adjust the height of the indicator */
+      maxWidth:"78px !important",
+      margin:'0 20px',
+      height: "3px",
       bottom: "1px",
       borderRadius: '10px 10px 0 0',
+      // left: 'calc(1% + 40px) !important'
+
+      // position: 'absolute', /* Position the indicator absolutely */
+      // paddingLeft: '39px'   
     },
     "& .Mui-selected": {
       borderRadius: '15px 15px 0 0',

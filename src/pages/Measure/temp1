@@ -1,0 +1,141 @@
+import React from "react";
+import { HeaderSidebar } from "../../components";
+import {
+  BackButton,
+  Background,
+  CustomIcon,
+  // DescriptionSection,
+  HeaderContainer,
+  LastUpdatedDateAndTimeSpan,
+  LastUpdatedSpan,
+  // MainContainer,
+  // NewFeatureSection,
+  PageTitle,
+  // RightAnalysisSection,
+  // SpendAnalysisEmissionsSection,
+  TitleContainer,
+  // ValidationRateSection,
+} from "./style";
+import { spendAnalysisTitle } from "./constants";
+import { lastUpdatedText } from "./constants";
+import { BackButtonIcon, CalenderIcon } from "../../assets/image/svg";
+
+const SpendAnalysis = () => {
+  return (
+    <Background>
+      <HeaderSidebar>
+        <HeaderContainer>
+          <TitleContainer>
+            <BackButton>
+              <BackButtonIcon />
+            </BackButton>
+            <PageTitle>{spendAnalysisTitle}</PageTitle>
+          </TitleContainer>
+          <LastUpdatedSpan>
+            <CustomIcon>
+              {" "}
+              <CalenderIcon /> {" "}
+            </CustomIcon>{" "}
+            Last Updated:
+            {
+              <LastUpdatedDateAndTimeSpan>
+                {lastUpdatedText}
+              </LastUpdatedDateAndTimeSpan>
+            }
+          </LastUpdatedSpan>
+        </HeaderContainer>
+        {/* <MainContainer>
+          <DescriptionSection>
+            
+          </DescriptionSection>
+          <RightAnalysisSection>
+            <NewFeatureSection></NewFeatureSection>
+            <SpendAnalysisEmissionsSection></SpendAnalysisEmissionsSection>
+            <ValidationRateSection></ValidationRateSection>
+          </RightAnalysisSection>
+        </MainContainer> */}
+      </HeaderSidebar>
+    </Background>
+  );
+};
+
+export default SpendAnalysis;
+
+
+
+
+
+
+import styled from "@emotion/styled";
+import { Box } from "@mui/material";
+
+export const Background = styled("div")(({ theme }) => ({
+  backgroundColor: theme.secondary.bgWhite,
+  fontFamily: theme.typography.fontFamily,
+}));
+
+export const Container = styled("div")(({ theme }) => ({
+}));
+
+export const HeaderContainer = styled(Box)(({ theme }) => ({
+  display: "flex",
+  gap: "10px",
+  justifyContent: "space-between",
+  alignItems: "center",
+}));
+
+export const TitleContainer = styled(Box)(({ theme }) => ({
+  fontWeight: "700",
+  fontSize: "22px",
+  fontFamily: theme.typography.fontFamily,
+  display: "flex",
+  gap: "10px",
+  alignItems: "center",
+}));
+
+export const BackButton = styled("button")(({ theme }) => ({
+  paddingTop: "2px",
+  border: "none",
+  backgroundColor: "transparent",
+}));
+
+export const PageTitle = styled(Box)(({ theme }) => ({
+}));
+
+export const LastUpdatedSpan = styled(Box)(({ theme }) => ({
+  color: theme.secondary.whiteBlue600,
+  fontFamily: theme.typography.fontFamily,
+  display: "flex",
+  alignItems: "end",
+  gap: "5px",
+  fontWeight: "400",
+  lineHeight: "26px",
+  fontSize: "14px",
+}));
+
+export const LastUpdatedDateAndTimeSpan = styled(Box)(({ theme }) => ({
+  fontWeight: "600",
+}));
+export const CustomIcon = styled(Box)(({ theme }) => ({}));
+
+// export const MainContainer = styled(Box)(({ theme }) => ({}));
+
+// export const DescriptionSection = styled(Box)(({ theme }) => ({
+//   // Add your styles here
+// }));
+
+// export const RightAnalysisSection = styled(Box)(({ theme }) => ({
+//   // Add your styles here
+// }));
+
+// export const NewFeatureSection = styled(Box)(({ theme }) => ({
+//   // Add your styles here
+// }));
+
+// export const SpendAnalysisEmissionsSection = styled(Box)(({ theme }) => ({
+//   // Add your styles here
+// }));
+
+// export const ValidationRateSection = styled(Box)(({ theme }) => ({
+//   // Add your styles here
+// }));

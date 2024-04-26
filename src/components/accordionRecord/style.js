@@ -1,31 +1,53 @@
 import styled from "@emotion/styled";
-import { Box ,Link, Typography,} from "@mui/material";
-import Accordion from '@mui/material/Accordion';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
+import { Box ,IconButton,Link, Tooltip, Typography,} from "@mui/material";
 
+export const AccordionButton = styled("button")(({ theme }) => ({
+  border:"none",
+  backgroundColor:"transparent",
+  width:"100%",
+  cursor:"pointer"
+}));
 
-export const Background = styled(Box)(({ theme }) => ({
+export const Background = styled('div')(({ theme }) => ({
   border:`1px solid ${theme.secondary.lightGreyOpacity}`,
   display:"flex",
   position:"relative",
   alignItems:"center",
   flexDirection:"row",
   borderRadius:"10px",
-  padding:"40px 35px",
+  padding:"35px 35px",
   marginBottom: "20px",
   justifyContent:"space-between",
 }));
 
+
+export const RowTitleContainer = styled('div')(({ theme }) => ({
+  display:"flex",
+  justifyContent:"left"
+}));
 export const RowTitle = styled(Typography)(({ theme }) => ({
   lineHeight:"36.08px",
   fontSize:"22px",
   fontWeight:"600", 
   display:"flex",
-  justifyContent:"center",
-  alignItems:"center",
-  gap:"6px"
+  maxWidth:"450px",
+  textAlign: "left",
+  // gap:"8px"
 }));
+
+export const CustomTooltip = styled(Tooltip)(({ theme }) => ({
+  padding:"0 !important",
+}));
+
+export const CustomIconButton = styled(IconButton)(({ theme }) => ({
+  padding:"0 !important",
+  paddingLeft:"7px !important",
+  // paddingBottom:"0 !important",
+  "&:hover": {
+    backgroundColor: "transparent", // Override the background color on hover
+  },
+}));
+
 
 export const RowDetailContainer = styled(Box)(({ theme }) => ({
   // border:`1px solid ${theme.secondary.lightGreyOpacity}`,
@@ -41,17 +63,41 @@ export const RowDetailContainer = styled(Box)(({ theme }) => ({
 
 export const EssentialSpan = styled(Box)(({ theme }) => ({
   position: "absolute",
-  borderRadius:"0 10px 0 30px",
-  top: "0",
+  borderRadius:"0 12px 0 30px",
+  top: "-0.5px",
   fontWeight:"500",
   lineHeight:"18px",
-  right: "0",
+  right: "-1px",
   padding: "4px 8px",
   paddingLeft:"20px", 
   fontSize:"12px",
   backgroundColor: theme.primary.orange, 
-  // color: theme., 
-  // borderRadius: "4px", 
+}));
+export const RecommendedSpan = styled(Box)(({ theme }) => ({
+  position: "absolute",
+  borderRadius:"0 12px 0 30px",
+  top: "-1px",
+  fontWeight:"500",
+  lineHeight:"18px",
+  right: "-1px",
+  padding: "4px 8px",
+  paddingLeft:"20px", 
+  fontSize:"12px",
+  color:theme.primary.white,
+  backgroundColor: theme.primary.main, 
+}));
+export const MandatorySpan = styled(Box)(({ theme }) => ({
+  position: "absolute",
+  color:theme.primary.white,
+  borderRadius:"0 12px 0 30px",
+  top: "-1px",
+  fontWeight:"500",
+  lineHeight:"18px",
+  right: "-1px",
+  padding: "4px 8px",
+  paddingLeft:"20px", 
+  fontSize:"12px",
+  backgroundColor: theme.primary.green, 
 }));
 
 export const RecordTextContainer = styled(Box)(({ theme }) => ({

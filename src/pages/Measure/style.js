@@ -37,7 +37,6 @@ export const Container = styled(Box)(({ theme }) => ({
 export const PageTitle = styled(Box)(({theme}) => ({
   fontWeight: "700",
   fontSize:"22px",
-  // display:"block",
   lineHeight:"36.08px",
   fontFamily:theme.typography.fontFamily
 }));
